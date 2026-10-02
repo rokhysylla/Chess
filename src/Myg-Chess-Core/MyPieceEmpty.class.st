@@ -16,6 +16,11 @@ MyPieceEmpty >> isPiece [
 ]
 
 { #category : 'rendering' }
+MyPieceEmpty >> onEssai [
+	^' '
+]
+
+{ #category : 'rendering' }
 MyPieceEmpty >> renderPieceOn: aSquare [
 	^' '
 ]
