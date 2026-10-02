@@ -167,7 +167,8 @@ MyChessSquare >> initialize [
 		background: Color white;
 		geometry: BlSquareGeometry new.
 
-	self addEventHandlerOn: BlClickEvent do: [ :e | self click ]
+	self addEventHandlerOn: BlClickEvent do: [ :e | self click ].
+	contents :=MyPieceEmpty new.
 ]
 
 { #category : 'accessing' }
