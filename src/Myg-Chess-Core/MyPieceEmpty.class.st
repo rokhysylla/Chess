@@ -19,3 +19,8 @@ MyPieceEmpty >> isPiece [
 MyPieceEmpty >> renderPieceOn: aSquare [
 	^' '
 ]
+
+{ #category : 'rendering' }
+MyPieceEmpty >> targetSquaresLegal: aBoolean [
+	^#()
+]
