@@ -169,6 +169,7 @@ MyChessSquare >> initialize [
 
 	self addEventHandlerOn: BlClickEvent do: [ :e | self click ].
 	contents :=MyPieceEmpty new.
+	contents square: self
 ]
 
 { #category : 'accessing' }

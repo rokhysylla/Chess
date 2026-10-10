@@ -6,6 +6,11 @@ Class {
 }
 
 { #category : 'accessing' }
+MyPieceEmpty >> color [
+	^ nil
+]
+
+{ #category : 'accessing' }
 MyPieceEmpty >> id [ 
 	^''
 ]
