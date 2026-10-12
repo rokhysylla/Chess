@@ -26,8 +26,10 @@ MyPieceEmpty >> onEssai [
 ]
 
 { #category : 'rendering' }
-MyPieceEmpty >> renderPieceOn: aSquare [
-	^' '
+MyPieceEmpty >> renderPieceOn:aSquare [
+	^ aSquare color isBlack
+		ifTrue: [ 'x' ]
+		ifFalse: [ 'z' ]
 ]
 
 { #category : 'rendering' }
