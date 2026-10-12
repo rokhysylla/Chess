@@ -36,12 +36,12 @@ MyPawn >> moveforward [
 	moves := OrderedCollection new.
 	nextSquare := self isWhite ifTrue: [ square up ] ifFalse: [ square down ].
 	
-	 [ nextSquare hasPiece not] ifTrue: [
+	 (nextSquare notNil and:[ nextSquare hasPiece not]) ifTrue: [
 		moves add: nextSquare.
 		self isfirstPosition ifTrue: [
 			| doubleSquare |
 			doubleSquare := self isWhite ifTrue: [ nextSquare up ] ifFalse: [ nextSquare down ].
-			[ doubleSquare hasPiece not ] ifTrue:[
+			(doubleSquare notNil and:[ doubleSquare hasPiece not ]) ifTrue:[
 			moves add:doubleSquare]]].
 			
 	^ moves
@@ -56,9 +56,5 @@ MyPawn >> renderPieceOn: aSquare [
 { #category : 'rendering' }
 MyPawn >> targetSquaresLegal: aBoolean [
 
-	^ (self isWhite
-		   ifTrue: [ { square up } ]
-		   ifFalse: [ { square down } ]) select: [ :s |
-		  s notNil and: [
-			  s hasPiece not or: [ s contents color ~= color ] ] ]
+	^ self moveforward 
 ]

@@ -89,7 +89,7 @@ MyChessSquare >> contents [
 MyChessSquare >> contents: aPiece [
 
 	| text |
-	contents := aPiece ifNotNil: [MyPieceEmpty new].
+	contents := aPiece ifNil: [MyPieceEmpty new].
 	contents square: self.
 	text := contents renderPieceOn: self.
 	piece text: (text asRopedText
