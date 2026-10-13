@@ -16,13 +16,13 @@ MyPieceEmpty >> id [
 ]
 
 { #category : 'rendering' }
-MyPieceEmpty >> isPiece [ 
+MyPieceEmpty >> isEnemyOf:aPiece [
 	^false
 ]
 
 { #category : 'rendering' }
-MyPieceEmpty >> onEssai [
-	^' '
+MyPieceEmpty >> isPiece [ 
+	^false
 ]
 
 { #category : 'rendering' }

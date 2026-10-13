@@ -14,13 +14,18 @@ MyPawn >> captureDiagonal [
 		ifFalse: [ { square down left . square down right } ].
 		
 	^ diagonalTargets select: [ :s |
-		s notNil and: [ s hasPiece and: [ s contents color ~= color ] ] ]
+		s notNil and: [ s contents isEnemyOf:self]]
 ]
 
 { #category : 'accessing' }
 MyPawn >> id [
 
 	^ 'P'
+]
+
+{ #category : 'as yet unclassified' }
+MyPawn >> isEnemyOf:aPiece [
+	^self color ~= aPiece color
 ]
 
 { #category : 'as yet unclassified' }

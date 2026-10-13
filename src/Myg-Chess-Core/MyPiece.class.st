@@ -62,7 +62,7 @@ MyPiece >> collectSquares: collectBlock while: untilBlock [
 		whileTrue: [ targets add: next ].
 
 	"If we can it the next piece, then add it too"
-	(next notNil and: [ next contents color ~= color ]) ifTrue: [ targets add: next ].
+	(next notNil and: [ next contents isEnemyOf: self ]) ifTrue: [ targets add: next ].
 
 	^ targets
 ]
@@ -123,6 +123,11 @@ MyPiece >> downRightDiagonalLegal: aBoolean [
 MyPiece >> id [
 
 	^ 'Q'
+]
+
+{ #category : 'testing' }
+MyPiece >> isEnemyOf:aPiece [
+	^self color ~= aPiece color
 ]
 
 { #category : 'testing' }
