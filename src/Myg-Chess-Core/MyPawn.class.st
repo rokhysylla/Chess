@@ -58,12 +58,6 @@ MyPawn >> moveforward [
 ]
 
 { #category : 'rendering' }
-MyPawn >> renderPieceOn: aSquare [ 
-	
-	^ aSquare renderPawn: self
-]
-
-{ #category : 'rendering' }
 MyPawn >> targetSquaresLegal: aBoolean [
 
 	^ self moveforward 
