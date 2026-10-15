@@ -60,7 +60,7 @@ MyPawn >> moveforward [
 { #category : 'rendering' }
 MyPawn >> targetSquaresLegal: aBoolean [
 
-	^ self moveforward 
+	^ self moveforward , self captureDiagonal 
 ]
 
 { #category : 'rendering' }
