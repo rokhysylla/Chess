@@ -5,6 +5,11 @@ Class {
 	#package : 'Myg-Chess-Core'
 }
 
+{ #category : 'rendering' }
+MyBishop >> blackPieceCharacters [
+	^ #( $V $v )
+]
+
 { #category : 'accessing' }
 MyBishop >> id [
 	
@@ -24,4 +29,9 @@ MyBishop >> targetSquaresLegal: aBoolean [
 	  , (self upLeftDiagonalLegal: aBoolean)
 	  , (self downRightDiagonalLegal: aBoolean)
 	  , (self downLeftDiagonalLegal: aBoolean)
+]
+
+{ #category : 'rendering' }
+MyBishop >> whitePieceCharacters [
+	^ #( $B $b )
 ]

@@ -27,6 +27,11 @@ MyKing >> basicTargetSquares [
 	}
 ]
 
+{ #category : 'testing' }
+MyKing >> blackPieceCharacters [
+	^ #( $K $k )
+]
+
 { #category : 'accessing' }
 MyKing >> id [
 	
@@ -91,4 +96,9 @@ MyKing >> targetSquaresLegal: aBoolean [
 					s contents color ~= color and: [ 
 						"Let's hope the piece is not defended"
 						threatenedSquares includes: s  ] ] ] ] ]
+]
+
+{ #category : 'testing' }
+MyKing >> whitePieceCharacters [
+	^ #( $L $l )
 ]

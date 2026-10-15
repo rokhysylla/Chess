@@ -5,6 +5,11 @@ Class {
 	#package : 'Myg-Chess-Core'
 }
 
+{ #category : 'rendering' }
+MyPawn >> blackPieceCharacters [
+	^ #( $P $p )
+]
+
 { #category : 'as yet unclassified' }
 MyPawn >> captureDiagonal [
 
@@ -62,4 +67,9 @@ MyPawn >> renderPieceOn: aSquare [
 MyPawn >> targetSquaresLegal: aBoolean [
 
 	^ self moveforward 
+]
+
+{ #category : 'rendering' }
+MyPawn >> whitePieceCharacters [
+	^ #( $O $o )
 ]

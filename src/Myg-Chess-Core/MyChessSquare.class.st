@@ -292,6 +292,13 @@ MyChessSquare >> select [
 	self border: Color green
 ]
 
+{ #category : 'accessing' }
+MyChessSquare >> selectCharacterFrom: duo [
+	^ color isBlack
+		ifTrue: [ duo second ]
+		ifFalse: [ duo first ]
+]
+
 { #category : 'highlighting' }
 MyChessSquare >> unhighlightTarget [
 

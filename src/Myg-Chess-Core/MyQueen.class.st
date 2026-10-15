@@ -6,6 +6,11 @@ Class {
 }
 
 { #category : 'rendering' }
+MyQueen >> blackPieceCharacters [
+	^ #( $Q $q )
+]
+
+{ #category : 'rendering' }
 MyQueen >> renderPieceOn: aSquare [
 
 	^ aSquare renderQueen: self
@@ -24,4 +29,9 @@ MyQueen >> targetSquaresLegal: aBoolean [
 	             , (self leftFileLegal: aBoolean)
 	             , (self rightFileLegal: aBoolean).
 	^ likeABishop , likeARook
+]
+
+{ #category : 'rendering' }
+MyQueen >> whitePieceCharacters [
+	^ #( $W $w )
 ]

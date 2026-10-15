@@ -37,6 +37,13 @@ MyPiece >> board [
 	^ square board
 ]
 
+{ #category : 'testing' }
+MyPiece >> characters [
+	^ self isWhite
+		ifTrue: [ self whitePieceCharacters ]
+		ifFalse: [ self blackPieceCharacters ]
+]
+
 { #category : 'rendering' }
 MyPiece >> collectSquares: aBlock [
 
@@ -174,6 +181,11 @@ MyPiece >> moveTo: aSquare [
 	square emptyContents.
 	square := aSquare.
 	aSquare contents: self
+]
+
+{ #category : 'rendering' }
+MyPiece >> renderPieceOn: aSquare [
+	^ aSquare selectCharacterFrom: self characters
 ]
 
 { #category : 'rendering' }
